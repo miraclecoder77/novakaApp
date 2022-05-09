@@ -1,0 +1,103 @@
+#wrapper {
+    height: 80vh;
+    width: 100%;
+    background: #121212;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    width: 70%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+#h1 {
+    text-align: center;
+    margin-top: 1.6rem;
+    
+}
+.wrapper {
+    display: flex;
+    gap:3rem
+
+}
+
+/* styling for the pixel input container  */
+.nova-pixel {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* styling for the switch container */
+.nova-switch {
+    flex: 1;
+    display: grid;
+    place-content: center;
+    
+    
+}
+/* styling for the rem input container  */
+.nova-rem {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* input style for  Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* input style for Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input {
+    outline: none;
+    font-size: 2rem;
+    width: 23rem;
+    background: rgb(226, 220, 220);
+}
+label {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width:480px) {
+    #wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .box {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+    #h1 {
+        text-align: center;
+        margin-top: .1rem;
+        
+    }
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.5rem;
+    }
+    input {
+        font-size: 1.1rem;
+        width: 11rem;
+        box-sizing: border-box;
+        width: 100%;
+    }
+}
