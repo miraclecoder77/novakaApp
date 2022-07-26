@@ -1,16 +1,15 @@
 
 .nav-header {
     font-size: 3rem;
-    margin: 1.1rem 1.4rem ;
-} 
-nav {
-    background: #121212;
-}
-h1 {
     font-family: 'Yuji Boku', serif;
+    padding: 0px 5%
+
 }
-h1 a {
+
+    
+ a {
+
+    /* font-size: 3rem; */
     text-decoration: none;
     color: white;
-    font-size: 3rem;
 }

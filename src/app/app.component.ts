@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -8,21 +8,29 @@ import { FormControl } from '@angular/forms';
 })
 export class AppComponent implements OnInit {
   title = 'novakaculator';
-  rem = new FormControl('');
-  px = new FormControl('');
 
-  ngOnInit(): void {
-    this.rem.valueChanges.subscribe(v => {
-      let newPx = parseFloat(v)
-      this.px.patchValue(newPx * 16)
-    })
+  constructor (private fb:FormBuilder) {}
 
-    this.px.valueChanges.subscribe(v => {
-      let newRem = parseFloat(v)
-      this.rem.patchValue(newRem / 16)
+  form:FormGroup
+  convertRem(e) {
+    this.form.patchValue({
+      rem: (e.target.value * 1) / 16
     })
   }
+  convertPx(e) {
+    this.form.patchValue({
+      px: (e.target.value * 1) * 16
+    })
+  }
+  // footer date
+  today = new Date();
+  year = this.today.getFullYear();
 
+  ngOnInit(): void {
 
-
+    this.form = this.fb.group({
+      rem: [""],
+      px: [""]
+    })
+  }
 }
